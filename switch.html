@@ -1,0 +1,53 @@
+<html>
+
+<head>
+
+</head>
+
+<body id="body">
+
+    <select id="language" onchange="change_language()">
+        <option>Select your language</option>
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Telugu">Telugu</option>
+    </select>
+
+    <h1  id = "data" style="margin-left:500px; margin-top:300px">Digital Lync Technologies</h1>
+    <script>
+
+        var body = document.getElementById("body");
+        var English="Digital Lync";
+        var Hindi= "डिजिटल लिंक्स";
+        var Telugu="డిజిటల్ లింక్";
+
+        function change_language() {
+
+            var choice = document.getElementById("language").value;
+
+            switch (choice) {
+
+                case "English":
+                    body.style.backgroundColor = "black";
+                    body.style.color = "white";
+                    document.getElementById('data').innerHTML=English;
+                    break;
+                case "Hindi":
+                    body.style.backgroundColor = "lightgrey";
+                    body.style.color = "white";
+                    document.getElementById('data').innerHTML=Hindi;
+                    break;
+                case "Telugu":
+                    body.style.backgroundColor = "grey";
+                    body.style.color = "white";
+                    document.getElementById('data').innerHTML=Telugu;
+                    break;
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

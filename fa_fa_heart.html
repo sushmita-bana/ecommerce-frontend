@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>hand count</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <i  id="up"  onclick="likes()" class="fa fa-thumbs-up" style="font-size:36px"> </i>
+        <span style="font-size:20px"id="c">0</span>
+        <i  id ="down" onclick="dislike()"class="fa fa-thumbs-down" style="font-size:36px"></i>
+        <script>
+            var count=0;
+            function likes(){
+                if (document.getElementById('up')){
+                    count=count+1;
+                    document.getElementById('c').innerHTML=count;
+                }
+                   
+            }
+            function dislike(){
+                if (document.getElementById('down')){
+                    count=count-1;
+                    document.getElementById('c').innerHTML=count;
+
+                }
+            }
+
+        </script>
+    </body>
+</html>

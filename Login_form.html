@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Login form</title>
+        <style>
+
+            body{
+                background-color: pink;
+                border:1px solid black;
+
+            }
+            
+            
+            img{
+                height:100px;
+                width: 100px;
+                display:block;
+                margin-left: auto;
+                margin-right: auto;   
+                border: 3px solid black;
+                border-radius: 20px;
+            }
+            label{
+                margin-left: 10px;
+                font-size:large;
+                font-family: 'Times New Roman';
+                
+            }
+
+            #login{
+                background-color:skyblue;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                cursor: pointer;
+                width: 100%;
+                font-size: large;
+                border:none
+
+            }
+            #cancel{
+                background-color: red;
+                color: white;
+                padding: 14px 20px;
+                cursor: pointer;
+                font-size: large;
+                width:100px;
+                margin: 8px 0;
+                border:none;
+                margin-left: 10px;
+
+            }
+           
+        </style>
+    </head>
+    <body>
+        <form >
+            <div>
+                <h1 style="text-align:center">Login Form</h1>
+            </div>
+            <div>
+                <img src="https://play-lh.googleusercontent.com/ZyWNGIfzUyoajtFcD7NhMksHEZh37f-MkHVGr5Yfefa-IX7yj9SMfI82Z7a2wpdKCA=w240-h480-rw">
+            </div>
+            <br>
+            <br>
+            <div>
+                <label for ='user_name' ><b> User Name</b></label><br><br>
+                <input type="text" placeholder="Enter name" name="user name" id="'user_name"  size="100" style= "margin-left:10px">
+                <br>
+                <br>
+                <label for ='password'><b> Password</b></label><br><br>
+                <input type="password" placeholder="Enter password" name="password" id="'password"  size="100" style= "margin-left:10px">
+            </div>
+
+                <br>
+                <br>
+                <div >
+                <button id="login">Login</button>
+                </div>
+                <br>
+                <br>
+
+            <div>
+                
+               <input type="checkbox" name="check" id="check_box">
+               <label for ="check_box">Remember me</label>
+            </div>
+            <br>
+            <br>
+            <br>
+            <hr>
+            <div>
+                <button id="cancel"> Cancel</button>
+                <span style="margin-left:600px">Forgot</span>
+                <a href="#password" style="font-size:20px">password?</a>
+            </div>
+
+
+            
+        </form>
+    </body>
+</html>

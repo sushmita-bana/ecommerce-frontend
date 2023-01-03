@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <input id="phone_email" type="text" placeholder="Enter email or phonenumber">
+
+        <input id="password" type="password" placeholder="Enter password">
+        <button onclick="check()">check</button>
+        <script>
+            var email= 'sush@gmail.com';
+            var password='abcd';
+            var phone='1234';
+            function check(){
+            (email==document.getElementById('phone_email').value || phone==document.getElementById('phone_email').value) && password== document.getElementById('password').value ? alert("correct") : alert("wrong");
+            }
+        </script>
+    </body>
+</html>

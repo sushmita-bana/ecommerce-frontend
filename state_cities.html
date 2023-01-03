@@ -1,0 +1,68 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <select id="state" onchange="displayCity()">
+
+        </select>
+        <select id="cities" onselect="selectCity()">
+        </select>
+        <br>
+        <h1>The selected city is </h1><span id="c"> </span>
+        <script>
+            var allStates=["Telangana", "Karnataka", "Tamilnadu", "Andhra Pradesh", "Goa"];
+            var allCities={
+            "Telangana": ["Hyderabad", "Warangal", "Karimnagar", "Mahabubnagar", "Suryapet", "Nizamabad"],
+            "Karnataka": ["Bengaluru", "Mangalore", "Ballari", "Mysuru", "Vijaypura", "sivamogga"],
+            "Tamilnadu": ["Chennai", "Coimbatore", "Salem", "Madhurai", "Thanjavur", "Tiruppur"],
+            "Andhra Pradesh": ["Guntur", "Vijawada", "Vizag", "Tirupati", "Kadapa", "Ongole"],
+            "Goa": ["Panjim", "Mapusa", "Margao", "Canacona", "Quepem", "Ponda"],
+        };
+        var states=" ";
+        for (var i=0;i<allStates.length;i++){
+            states=states + "<option value= ' " +allStates[i]+"'>" + allStates[i] + "</option>";
+        }
+        var stateSelect= document.getElementById('state');
+        stateSelect.innerHTML=states;
+
+        //function displayCity(){
+
+            //var selectedState = document.getElementById("state").value;
+            //var citiesList = allCities[selectedState];
+            //var city=" ";
+            //for( var j=0;j<citiesList.length;j++){
+                //city= city + "<option value='" +citiesList[j]+ "'>" + citiesList[j] + "</option>";
+            //}
+            //var selectCity=document.getElementById("cities");
+            //selectCity.innerHTML=city;
+
+        //}
+        //displayCity();
+
+        function displayCity() {
+
+            var selectedState = document.getElementById("state").value;
+            var citiesByState = allCities[selectedState];
+            var citiesOptionList = "";
+
+            for (var i = 0; i < citiesByState.length; i++) {
+                citiesOptionList = citiesOptionList + "<option value='" + citiesByState[i] + "'>" + citiesByState[i] + "</option>";
+            }
+            document.getElementById("cities").innerHTML = citiesOptionList;
+           
+            }
+    
+        displayCity();
+
+        function selectCity(){
+
+            var selectedCity= document.getElementById("city").value;
+            document.getElementById("c").innerHTML=selectedCity;
+
+
+        }
+
+        </script>
+    </body>
+</html>

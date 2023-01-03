@@ -1,0 +1,67 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <select id="state" onchange="populateCities()">
+
+    </select>
+
+    <select id="city" onchange="selectCity()">
+
+    </select>
+    <h2>The selected city is </h2> <span id="c"> </span>
+    
+
+    <script>
+
+        var states = ["Telangana", "Karnataka", "Tamilnadu", "Andhra Pradesh", "Goa"];
+
+        var cities = {
+            "Telangana": ["Hyderabad", "Warangal", "Karimnagar", "Mahabubnagar", "Suryapet", "Nizamabad"],
+            "Karnataka": ["Bengaluru", "Mangalore", "Ballari", "Mysuru", "Vijaypura", "sivamogga"],
+            "Tamilnadu": ["Chennai", "Coimbatore", "Salem", "Madhurai", "Thanjavur", "Tiruppur"],
+            "Andhra Pradesh": ["Guntur", "Vijawada", "Vizag", "Tirupati", "Kadapa", "Ongole"],
+            "Goa": ["Panjim", "Mapusa", "Margao", "Canacona", "Quepem", "Ponda"],
+        }
+        var statesOptionList = "";
+
+        for (var i = 0; i < states.length; i++) {
+            statesOptionList = statesOptionList + "<option value='" + states[i] + "'>" + states[i] + "</option>";
+        }
+
+        var stateSelectionList = document.getElementById("state");
+        stateSelectionList.innerHTML = statesOptionList;
+
+        function populateCities() {
+
+            var selectedState = document.getElementById("state").value;
+            var citiesByState = cities[selectedState];
+            var citiesOptionList = "";
+
+            for (var i = 0; i < citiesByState.length; i++) {
+                citiesOptionList = citiesOptionList + "<option value='" + citiesByState[i] + "'>" + citiesByState[i] + "</option>";
+            }
+            document.getElementById("city").innerHTML = citiesOptionList;
+           
+            }
+    
+        populateCities();
+        function selectCity(){
+
+            var selectedCity= document.getElementById("city").value;
+            document.getElementById("c").innerHTML=selectedCity;
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
